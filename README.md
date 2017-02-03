@@ -15,7 +15,7 @@ The first bit of a 16 bit instruction is always the op code.
 
 ## Registers
 
-There are three register. The A register contains the address. The M register contains the data of the RAM at address A, RAM[A]. The D register is a helper register to perform arithmetic or logic operations.
+There are three register. The A register contains the address. The M register contains the data of the RAM at address A, RAM[A]. The D register is a data register to perform arithmetic or logic operations.
 
 ## The A instruction
 `@value`
@@ -39,7 +39,7 @@ Instruction encoding:
 | Bit Range       	| Meaning		|
 | ------------- 	|-------------|
 | i[0]     			| Op Code		|
-| i[1..2]      		| unused	    |
+| i[1..2]      		| unused, 1 by default	    |
 | i[3]      		| a			    |
 | i[4..9]      		| comp	    	|
 | i[10..12]    		| dest addr    	|
