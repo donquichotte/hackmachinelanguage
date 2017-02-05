@@ -25,8 +25,8 @@ Instruction encoding:
 
 | Bit Range       	| Meaning		|
 | ------------- 	|-------------|
-| i[0]     			| Op Code		|
-| i[1..15]      		| value	    |
+| i[15]     			| Op Code		|
+| i[0..14]      		| value	    |
 
 Loads `value` into the A register and RAM[`value`] into the M register.
 
@@ -38,12 +38,12 @@ Instruction encoding:
 
 | Bit Range       	| Meaning		|
 | ------------- 	|-------------|
-| i[0]     			| Op Code		|
-| i[1..2]      		| unused, 1 by default	    |
-| i[3]      		| a			    |
-| i[4..9]      		| comp	    	|
-| i[10..12]    		| dest addr    	|
-| i[13..15]    		| jmp	    	|
+| i[15]     			| Op Code		|
+| i[14..13]      		| unused, 1 by default	    |
+| i[12]      		| a			    |
+| i[11..6]      		| comp	    	|
+| i[5..3]    		| dest addr    	|
+| i[2..0]    		| jmp	    	|
 
 
 dest encoding:
